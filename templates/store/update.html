@@ -8,8 +8,9 @@
   <div class="form-row">
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      {% product_form|crispy %}
-      <button type="submit" class="btn btn-outline-dark">Create</button>
+      {{form|crispy}}
+
+      <button type="submit" class="btn btn-outline-dark">Update</button>
     </form>
   </div>
 </div>

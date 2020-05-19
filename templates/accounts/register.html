@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-  </head>
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
   <body>
     <div class="wrapper fadeInDown">
       <div id="formContent">
@@ -12,10 +10,7 @@
         <a href="{% url 'register' %}"><h2 class="active" >Sign Up </h2></a>
         <form method="POST">
           {% csrf_token %}
-          <input type="text" id="login" class="fadeIn second" name="username" placeholder="login" required>
-          <input type="email" id="password" class="fadeIn third" name="email" placeholder="email">
-          <input type="password" id="password" class="fadeIn all" name="password1" placeholder="password" required>
-          <input type="password" id="password" class="fadeIn all" name="password2" placeholder="password" required>
+          {{forms|crispy}}
           <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
         <div id="formFooter">
@@ -24,4 +19,5 @@
     </div>
     </div>
   </body>
+{% endblock %}
 </html>
