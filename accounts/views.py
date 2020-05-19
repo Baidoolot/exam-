@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, ProfileForm
 from django.contrib.auth import authenticate, login, logout
+# from django.views.decorators.csrf import csrf_exempt
 
 from django.contrib.auth.decorators import login_required
 
@@ -15,7 +16,7 @@ def register_user(request):
     context = {'form': form}
     return render(request, 'accounts/register.html', context)
 
-
+# @csrf_exempt
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')

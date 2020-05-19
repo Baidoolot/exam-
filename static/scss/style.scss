@@ -31,9 +31,9 @@ body {
     font-family: $font-poppins;
     font-size: 14px;
     background-color: $white-color;
-    margin-top: 85px;
+    margin-top: 200px;
     @media #{$breakpoint-xs} {
-        margin-top: 80px;
+        margin-top: 200px;
     }
 }
 

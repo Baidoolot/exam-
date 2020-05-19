@@ -19,10 +19,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   background-color: #ffffff;
-  margin-top: 85px; }
+  margin-top: 200px; }
   @media only screen and (max-width: 767px) {
     body {
-      margin-top: 80px; } }
+      margin-top: 200px; } }
 
 h1,
 h2,
